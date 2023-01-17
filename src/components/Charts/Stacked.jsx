@@ -10,9 +10,9 @@ const Stacked = ({ width, height }) => {
       id="charts"
       primaryXAxis={stackedPrimaryXAxis}
       primaryYAxis={stackedPrimaryYAxis}
-      chartArea={{ border: { width: 0} }}
+      chartArea={{ border: { width: 0 } }}
       tooltip={{ enable: true }}
-      legendSettings={{ background: 'white'}}
+      legendSettings={{ background: 'white' }}
     >
       <Inject services={[Legend, Category, StackingColumnSeries, Tooltip]} />
       <SeriesCollectionDirective>
