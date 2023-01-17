@@ -9,32 +9,28 @@ const Ecommerce = () => {
   return (
     <div classname='mt-24'>
       <div classname='flex flex-wrap lg:flex-nowrap justify-center'>
-        <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-hero-pattern 
-        bg-no-repeat bg-cover bg-center'>
+        <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-hero-pattern bg-no-repeat bg-cover bg-center'>
           <div className='flex justify-between items-center'>
             <div>
-              <p classname='font-bold text-gray-400 '>Earnings</p>
+              <p className='font-bold text-gray-400'>Earnings</p>
               <p className='text-2xl'>$63,448.78</p>
             </div>
           </div>
-          <div classname='mt-6'>
-            <Button color='white' bgColor='blue' text='Download' borderRadius='10px' size='md' />
+          <div className='mt-6'>
+            <Button color='white' bgColor='blue' text='Download' borderRadius='10px' />
           </div>
         </div>
 
         <div classname='flex m-3 flex-wrap justify-center gap-1 items-center'>
           {earningData.map((item) => (
-            <div
-              key={item.title}
-              classname='bg-white h-44 dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56 p-4 pt-9 rounded-2xl'
-            >
+            <div key={item.title} classname='bg-white h-44 dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56 p-4 pt-9 rounded-2xl'>
               <button type='button'
                 style={{ color: item.iconColor, backgroundColor: item.iconBg }}
                 classname='text-2xl opacity-0.9 rounded-full p-4 hover:drop-shadow-xl'
               >
                 {item.icon}
               </button>
-              <p classname='mt-3'>
+              <p className='mt-3'>
                 <span className='text-lg font-semibold'>{item.amount}</span>
                 <span className={`text-sm text-${item.pcColor} ml-2`}>{item.percentage}</span>
               </p>
@@ -45,7 +41,7 @@ const Ecommerce = () => {
       </div>
 
       <div className='flex gap-10 flex-wrap justify-center'>
-        <div className='bg-white dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-780'>
+        <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-780'>
           <div classname='flex justify-between'>
             <p className='font-semibold text-xl'>Revenue Updates</p>
             <div className='flex items-center gap-4'>
@@ -81,7 +77,7 @@ const Ecommerce = () => {
               <div classname='mt-5'>
                 <SparkLine 
                 currentColor='blue'
-                id='line-sparkline'
+                id='line-sparkLine'
                 type='Line'
                 height='80px'
                 width='250px'
@@ -90,6 +86,17 @@ const Ecommerce = () => {
                 />
               </div>
 
+              <div classname='mt-10'>
+                <Button
+                color='white'
+                bgColor='blue'
+                text='Download Report'
+                borderRadius='10px'
+                />
+              </div>
+            </div>
+            <div>
+              <Stacked width='320px' height='360px' />
             </div>
           </div>
         </div>
